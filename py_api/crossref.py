@@ -52,6 +52,3 @@ def handle() -> Response:
         return Response(f"Error processing files: {exc}", status=400)
 
 
-
-
-
