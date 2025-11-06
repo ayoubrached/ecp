@@ -12,6 +12,7 @@ app = Flask(__name__)
 
 
 @app.post("/")
+@app.post("/api/crossref")
 def handle() -> Response:
     if 'scheduled' not in request.files or 'timesheets' not in request.files:
         return Response("Expected file fields 'scheduled' and 'timesheets'", status=400)

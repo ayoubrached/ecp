@@ -12,6 +12,7 @@ app = Flask(__name__)
 
 
 @app.post("/")
+@app.post("/api/calculate")
 def handle() -> Response:
     if 'timesheets' not in request.files:
         return Response("Missing file field 'timesheets'", status=400)
